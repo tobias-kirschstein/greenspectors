@@ -15,19 +15,27 @@ TUM.ai Makeathon October 2021
     conda create -n greenspectors
     ```
     If you don't yet have conda, you can install it here: https://docs.conda.io/en/latest/miniconda.html
- 2. Install Python 3.8:
+ 2. Activate the `conda` environment:
+    ```shell
+    conda activate greenspectors
+    ```
+ 3. Install Python 3.8:
     ```shell
     conda install python=3.8
     ```
- 3. Clone the repository:
+ 4. Clone the repository:
     ```shell
     git clone git@github.com:tobias-kirschstein/greenspectors.git
     ```
- 4. Install the `Greenspectors` repository in development mode (so you don't have to redo it whenever the repo changes):
+ 5. Install the `Greenspectors` repository in development mode (so you don't have to redo it whenever the repo changes):
     ```shell
     pip install -e .
     ```
     This command has to be run in the root directory of your cloned repository (where the folders `notebooks`, `src`, `test` are)
+ 6. use Jupyter Lab to run notebooks:
+    ```shell
+    jupyter lab
+    ```
 
 ## 1.2. Contributing
 
