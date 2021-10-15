@@ -1,0 +1,47 @@
+MICROSOFT
+Sustainability Goals
+
+By 2023
+Reach 70% renewable energy for data centers
+
+
+By 2025
+100% renewable energy
+Protect more land than used by direct operations
+Build a new Planetary Computing platform to help monitor, model, and manage Earth's natural systems
+Invest an additional $150 million towards diversity and inclusion efforts, double the number of Black and African American people managers, senior individual contributors, and senior leaders in the United States
+
+
+By 2030
+Become a carbon negative company
+Become a water positive company
+Achieve zero waste for its direct operations, products, and packaging. To achieve this goal, the company will:
+Divert at least 90% of its waste from landfills
+Manufacture 100% recyclable Surface devices
+Use 100% recyclable packaging
+Achieve at least 75% diversion of construction and demolition waste for all projects.
+Committed to a “100/100/0” vision through which the company will have 100% of its electricity consumption matched by zero-carbon energy purchases 100% of the time.
+
+
+By 2050 
+Remove all of the carbon the company has emitted since Microsoft was founded
+
+Latest Sustainability Reporting
+
+Highlights
+ 
+Reduced 586,683 metric tons of CO2 equivalent emissions across all scopes in FY20
+Diverted over 60,000 metric tons of waste from landfills in 2020
+1 million metric tons of carbon removal contracted for in 2020
+Reduced scope 3 emissions related to devices by 8.9% compared to 2017
+Top suppliers reduced their collective footprint by 21 million tons of CO2 equivalent emissions
+Launched the Microsoft Sustainability Calculator to provide CO2 transparency to customers
+Over 10,500 employees engaged in Eco-challenges to reduce personal waste footprints
+Achieved Zero Waste Certification of data centers in Dublin, Ireland and Boydton, Virginia
+Piloted Circular Centers that will contribute to increased reuse of servers by 90% by 2025
+Invested $129 million across funds and organizations innovating in carbon reduction, water management, and circular economy
+Invested $30 million in Closed Loop Partners’ funds to help build a circular economy
+Invested $10 million in the Emerald Technology Ventures’ Global Water Impact Fund to support innovative technologies for water conservation, access, and quality
+On-boarded 10 petabytes of environmental and Earth observation data to our Azure program that is now freely available for the conservation community
+Provided 1.5 million people access to safe drinking water and sanitation through water accessibility initiatives
+
