@@ -1,0 +1,3 @@
+# All environment variables go here: paths to datasets/models/logs etc...
+
+TEST_VARIABLE = 'hi'
