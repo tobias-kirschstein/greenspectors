@@ -6,7 +6,7 @@ TUM.ai Makeathon October 2021
  - [Siemens Q&A](https://docs.google.com/document/d/1Vqd6bRytk_fKfnCmVjwEGyBJnr00Gjnls0Gd2aTCW_E/edit?usp=sharing)
  - [Business Part Ideas](https://docs.google.com/document/d/1RwkyPaZ-CcJfWCudokT2mA4mJjkWvEx7CNlf-2D51Qs/edit?usp=sharing)
  - [Makeathon Github repository](https://github.com/tum-ai/os-makeathon-2021)
- - [Presentation] (https://docs.google.com/presentation/d/10jGVwk_PDrPKcCpRgqFM284chptmDy_yHuPH3HSk8E4/edit?usp=sharing)
+ - [Presentation](https://docs.google.com/presentation/d/10jGVwk_PDrPKcCpRgqFM284chptmDy_yHuPH3HSk8E4/edit?usp=sharing)
 
 
 # 1. Getting Started
