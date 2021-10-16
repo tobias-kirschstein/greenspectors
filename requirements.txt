@@ -1,1 +1,7 @@
 ipywidgets=7.6.5
+flair==0.9
+greenspectors==0.0.1
+nltk==3.6.5
+setuptools==58.0.4
+requests==2.26.0
+scrapy==2.5.1
