@@ -12,9 +12,7 @@ Sustainability Goals
 55% reduction in emissions per unit of energy used (2015 baseline)
 26% reduction in absolute emissions across facilities, including Oracle Cloud data centers (2015 baseline)
 
-Latest Sustainability Reporting
-
-Highlights
+Latest Sustainability Reporting Highlights
  
 62% of electricity use at Oracle Cloud data centers worldwide certified as renewable in 2018
 100% renewable energy use at 94 leased data centers across 10 countries

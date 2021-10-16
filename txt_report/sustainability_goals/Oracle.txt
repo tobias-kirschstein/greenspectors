@@ -1,0 +1,13 @@
+Sustainability Goals
+
+2020 Goals
+20% reduction in energy per dollar of revenue
+33% target for renewable energy (achieved ahead of schedule)
+20% reduction in absolute emissions (achieved ahead of schedule)
+25% reduction in potable water consumption per square foot
+25% reduction in waste to landfill per square foot
+
+2025 Goals
+55% reduction in emissions per unit of energy used (2015 baseline)
+26% reduction in absolute emissions across facilities, including Oracle Cloud data centers (2015 baseline)
+

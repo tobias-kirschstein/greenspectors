@@ -1,0 +1,301 @@
+document,term,tfidf
+Amazon,climate pledge,0.11070958959162842
+Amazon,launched billion,0.11070958959162842
+Amazon,fund,0.09870991159810683
+Amazon,pledge,0.09870991159810683
+Amazon,000,0.09833766904821617
+Amazon,climate,0.08410469360134576
+Amazon,000 deployed,0.07380639306108562
+Amazon,launched,0.07363426073215365
+Amazon,100 000,0.06580660773207121
+Amazon,16,0.06580660773207121
+Apple,11,0.14670183211596097
+Apple,iphone,0.13505004770015758
+Apple,iphone 11,0.13505004770015758
+Apple,supplier,0.10197055051359431
+Apple,11 pro,0.09003336513343839
+Apple,average,0.09003336513343839
+Apple,carbon footprint,0.09003336513343839
+Apple,iphone 11 pro,0.09003336513343839
+Apple,pro,0.09003336513343839
+Apple,released,0.09003336513343839
+BAC,globally,0.10887012281627906
+BAC,green bonds,0.10279254893404315
+BAC,bofa,0.09075913628554678
+BAC,bofa securities,0.09075913628554678
+BAC,securities,0.09075913628554678
+BAC,vendors,0.09075913628554678
+BAC,bonds,0.09054746652561481
+BAC,use,0.08374832963101995
+BAC,green,0.0814014938426112
+BAC,globally reduced,0.08092186370225958
+BASF,palm,0.26072945500572786
+BASF,oil,0.24163957308115888
+BASF,palm oil,0.13036472750286393
+BASF,sites,0.10642722347934623
+BASF,sustainable,0.09567727634090627
+BASF,000 metric tons oil,0.08000701110882416
+BASF,25 sites,0.08000701110882416
+BASF,25 sites globally,0.08000701110882416
+BASF,36 achieved,0.08000701110882416
+BASF,36 achieved rspo,0.08000701110882416
+Blackrock,strategies,0.12630914295137757
+Blackrock,managed,0.11261864830999169
+Blackrock,esg,0.1029050877777418
+Blackrock,investment,0.1029050877777418
+Blackrock,100 active,0.0842060953009184
+Blackrock,100 active portfolios,0.0842060953009184
+Blackrock,100 active portfolios advisory,0.0842060953009184
+Blackrock,active,0.0842060953009184
+Blackrock,active portfolios,0.0842060953009184
+Blackrock,active portfolios advisory,0.0842060953009184
+Boeing,2025 baseline,0.13163699335901524
+Boeing,waste,0.12674321497698196
+Boeing,2025,0.11047262461404068
+Boeing,reduction,0.10000298107779769
+Boeing,hazardous,0.08775799557267684
+Boeing,hazardous waste,0.08775799557267684
+Boeing,reduction 2025,0.08775799557267684
+Boeing,reduction 2025 baseline,0.08775799557267684
+Boeing,set,0.08775799557267684
+Boeing,water use,0.08755332511617825
+Chevron,human rights,0.11798791950370989
+Chevron,rights,0.11798791950370989
+Chevron,human,0.10519935216828254
+Chevron,joined,0.10519935216828254
+Chevron,increased,0.07847516425657033
+Chevron,racial,0.07847516425657033
+Chevron,100 ranking,0.058993959751854945
+Chevron,100 ranking human,0.058993959751854945
+Chevron,100 ranking human rights,0.058993959751854945
+Chevron,15 million earned,0.058993959751854945
+Cisco,compared,0.12422149667613033
+Cisco,compared baseline,0.11760679969695165
+Cisco,facilities,0.11760679969695165
+Cisco,13,0.0716420014369288
+Cisco,generated,0.06639657433993768
+Cisco,plastic,0.06639657433993768
+Cisco,baseline,0.06590310392350066
+Cisco,absolute,0.062110748338065166
+Cisco,impact,0.062110748338065166
+Cisco,programs,0.058487134085162436
+Exxon,reduce,0.1641052495493299
+Exxon,methane,0.12336665464412482
+Exxon,flaring,0.10999509273762645
+Exxon,emissions,0.09319181524005292
+Exxon,emissions 15,0.0925249909830936
+Exxon,methane emissions,0.0925249909830936
+Exxon,reduce flaring,0.0925249909830936
+Exxon,reduce methane,0.0925249909830936
+Exxon,research,0.0925249909830936
+Exxon,sustainability goals,0.0925249909830936
+Facebook,solar wind,0.09664621247044486
+Facebook,solar wind projects,0.09664621247044486
+Facebook,wind projects,0.09664621247044486
+Facebook,generate,0.086170846847497
+Facebook,projects,0.08259853669616957
+Facebook,zero,0.08259853669616957
+Facebook,operations,0.07553300283085272
+Facebook,net zero,0.07297344694424397
+Facebook,supporting,0.07297344694424397
+Facebook,wind,0.07297344694424397
+Ford,face,0.09167677790749301
+Ford,million face,0.09167677790749301
+Ford,pay ratio,0.09167677790749301
+Ford,ratio,0.09167677790749301
+Ford,salaried,0.09167677790749301
+Ford,water,0.09160903246671875
+Ford,gender,0.081740043262993
+Ford,pay,0.081740043262993
+Ford,reduction,0.07835141709763677
+Ford,consecutive,0.06922123813902714
+General Motors,habitat,0.1255195004820163
+General Motors,wildlife,0.1255195004820163
+General Motors,wildlife habitat,0.1255195004820163
+General Motors,energy,0.103588412523918
+General Motors,reduced,0.093243721915856
+General Motors,energy use,0.08865685337198764
+General Motors,increased,0.08348450806795665
+General Motors,inclusion,0.07505194711908098
+General Motors,intensity,0.07505194711908098
+General Motors,10 million support,0.06275975024100815
+Google,resulting,0.2341928301862712
+Google,project,0.12528537220597916
+Google,million,0.11007763639898745
+Google,allocations,0.09367713207450848
+Google,loans small,0.09367713207450848
+Google,loans small medium,0.09367713207450848
+Google,loans small medium sized,0.09367713207450848
+Google,medium,0.09367713207450848
+Google,medium sized,0.09367713207450848
+Google,medium sized businesses,0.09367713207450848
+Honeywell,sites,0.1317889341357398
+Honeywell,annualized,0.11888731141574264
+Honeywell,certified iso,0.11888731141574264
+Honeywell,manufacturing sites,0.11888731141574264
+Honeywell,manufacturing sites certified,0.11888731141574264
+Honeywell,manufacturing sites certified iso,0.11888731141574264
+Honeywell,saving,0.11888731141574264
+Honeywell,sites certified,0.11888731141574264
+Honeywell,sites certified iso,0.11888731141574264
+Honeywell,iso,0.10600126008300143
+JPMorgan,executive team,0.13059679936749863
+JPMorgan,global workforce identify,0.13059679936749863
+JPMorgan,workforce identify,0.13059679936749863
+JPMorgan,global workforce,0.11644157085319266
+JPMorgan,operating,0.11644157085319266
+JPMorgan,operating committee,0.11644157085319266
+JPMorgan,committee,0.10639827639063247
+JPMorgan,team,0.10639827639063247
+JPMorgan,workforce,0.10639827639063247
+JPMorgan,scope,0.1020667873491905
+Jetblue,fuel,0.2023690468079751
+Jetblue,ground,0.18043451153863624
+Jetblue,ground fuel,0.1349126978719834
+Jetblue,pounds co2,0.1349126978719834
+Jetblue,pounds,0.10991447406299572
+Jetblue,reduce,0.08973203502811192
+Jetblue,co2,0.0734312758263874
+Jetblue,000 gallons fuel,0.0674563489359917
+Jetblue,000 gallons fuel create,0.0674563489359917
+Jetblue,000 ground,0.0674563489359917
+JohnsonJohnson,health,0.17916266008000528
+JohnsonJohnson,goal,0.12188742070504957
+JohnsonJohnson,care,0.10995511753739187
+JohnsonJohnson,million,0.09844227563090634
+JohnsonJohnson,consecutive,0.08302243544532814
+JohnsonJohnson,consecutive year,0.08302243544532814
+JohnsonJohnson,received,0.08302243544532814
+JohnsonJohnson,2nd,0.07330341169159459
+JohnsonJohnson,2nd consecutive,0.07330341169159459
+JohnsonJohnson,2nd consecutive year,0.07330341169159459
+Mastercard,million,0.13530026853927585
+Mastercard,500 million,0.08982903294914577
+Mastercard,financial,0.08982903294914577
+Mastercard,materials,0.08982903294914577
+Mastercard,committed,0.0822546972238252
+Mastercard,small,0.07607136763513934
+Mastercard,pandemic,0.07116104434437016
+Mastercard,goal,0.0670094251570729
+Mastercard,launched,0.0670094251570729
+Mastercard,2025,0.06341312903727814
+McD,beef,0.12259418777919177
+McD,food,0.1093063526182631
+McD,suppliers,0.08896862202516433
+McD,commitment,0.08659064837303863
+McD,packaging,0.08659064837303863
+McD,happy,0.08172945851946119
+McD,happy meal,0.08172945851946119
+McD,meal,0.08172945851946119
+McD,packaging recycled,0.08172945851946119
+McD,20,0.08153884790358053
+Microsoft,circular,0.11478199042710081
+Microsoft,water,0.10720028466545022
+Microsoft,tons,0.09342545311404456
+Microsoft,million,0.08644217586674473
+Microsoft,circular economy invested,0.08582364794619925
+Microsoft,economy invested,0.08582364794619925
+Microsoft,funds,0.08582364794619925
+Microsoft,invested,0.08562348880299074
+Microsoft,metric tons,0.08102820359014656
+Microsoft,metric,0.07697487477032659
+MorganStanley,billion,0.09553645150780611
+MorganStanley,plastic,0.08121092542071738
+MorganStanley,women,0.07165233863085457
+MorganStanley,bonds,0.07153673712055672
+MorganStanley,green,0.06431099057412258
+MorganStanley,000 jobs,0.053777974604440684
+MorganStanley,000 jobs reached,0.053777974604440684
+MorganStanley,000 jobs reached 88,0.053777974604440684
+MorganStanley,100 end,0.053777974604440684
+MorganStanley,100 end 2024,0.053777974604440684
+Oracle,100 renewable energy use,0.10459478852159025
+Oracle,collected recycling,0.10459478852159025
+Oracle,collected recycling reuse,0.10459478852159025
+Oracle,collected recycling reuse fy19,0.10459478852159025
+Oracle,recycling reuse,0.10459478852159025
+Oracle,recycling reuse fy19,0.10459478852159025
+Oracle,retired,0.10459478852159025
+Oracle,reuse fy19,0.10459478852159025
+Oracle,certified,0.09875049618152554
+Oracle,use,0.09651522904794234
+Pepsico,sustainably,0.1238198603312512
+Pepsico,87,0.10163072792781992
+Pepsico,direct,0.10163072792781992
+Pepsico,sustainably sourced,0.10163072792781992
+Pepsico,100,0.09548063735767662
+Pepsico,absolute ghg emissions value,0.07599031678870222
+Pepsico,commodities,0.07599031678870222
+Pepsico,direct commodities,0.07599031678870222
+Pepsico,emissions value,0.07599031678870222
+Pepsico,emissions value chain,0.07599031678870222
+Samsung,compliance,0.11741213625247936
+Samsung,cumulative,0.11741213625247936
+Samsung,fold,0.11741213625247936
+Samsung,fold increase,0.11741213625247936
+Samsung,fold increase female,0.11741213625247936
+Samsung,increase female,0.11741213625247936
+Samsung,female,0.10468597736454345
+Samsung,million tons,0.08865291330532787
+Samsung,increase,0.07809220398905686
+Samsung,tons,0.06390594138664554
+Siemens,compared,0.16189986212505486
+Siemens,compared levels,0.15327882182540253
+Siemens,revenue,0.15327882182540253
+Siemens,levels,0.14005824835505928
+Siemens,compared levels reduced,0.1146081157244471
+Siemens,environmental portfolio,0.1146081157244471
+Siemens,levels reduced,0.1146081157244471
+Siemens,efficiency,0.08653571659370808
+Siemens,generated,0.08653571659370808
+Siemens,portfolio,0.08653571659370808
+TDBank,america best,0.12774320095590963
+TDBank,america best employers,0.12774320095590963
+TDBank,best employers,0.12774320095590963
+TDBank,employers,0.12774320095590963
+TDBank,america,0.104073426517017
+TDBank,best,0.104073426517017
+TDBank,forbes,0.104073426517017
+TDBank,billion,0.08510081645884755
+TDBank,carbon,0.08510081645884755
+TDBank,ghg emissions,0.08040365207812435
+Unilever,forests,0.10848288918839784
+Unilever,metric ton,0.10848288918839784
+Unilever,metric ton production,0.10848288918839784
+Unilever,metric ton production reduced,0.10848288918839784
+Unilever,production reduced,0.10848288918839784
+Unilever,ton,0.10848288918839784
+Unilever,ton production,0.10848288918839784
+Unilever,ton production reduced,0.10848288918839784
+Unilever,list,0.08191081839827642
+Unilever,production,0.08191081839827642
+Visa,talent,0.11750948831171158
+Visa,launched,0.1172354309969481
+Visa,compared,0.08299922669435211
+Visa,100 renewable electricity diverted,0.05875474415585579
+Visa,200 million commitment,0.05875474415585579
+Visa,200 million commitment uplift,0.05875474415585579
+Visa,5 compared completed,0.05875474415585579
+Visa,5 compared completed transition,0.05875474415585579
+Visa,500 million green,0.05875474415585579
+Visa,500 million green bond,0.05875474415585579
+WaltDisney,met,0.11421850226391769
+WaltDisney,levels,0.09305474430964349
+WaltDisney,target,0.08624153603076673
+WaltDisney,diverse,0.080674739532054
+WaltDisney,60,0.07596808015602444
+WaltDisney,support,0.0682947347544645
+WaltDisney,million,0.05752083543525837
+WaltDisney,17 resort,0.057109251131958846
+WaltDisney,17 resort energy,0.057109251131958846
+WaltDisney,17 resort energy needs,0.057109251131958846
+WellsFargo,self,0.12816407963775167
+WellsFargo,related,0.11427253066117256
+WellsFargo,employees,0.10016551650228753
+WellsFargo,self identify,0.09612305972831375
+WellsFargo,development,0.08570439799587942
+WellsFargo,baseline reduced,0.07831223985594594
+WellsFargo,diverse,0.0678935781235116
+WellsFargo,finance,0.06408203981887584
+WellsFargo,self identify women,0.06408203981887584
+WellsFargo,workforce self,0.06408203981887584
