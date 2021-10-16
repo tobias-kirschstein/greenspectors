@@ -40,6 +40,57 @@ SYNONYMS = {
     'Wells Fargo': ['WFC']
 }
 
+COMPANY_SPECIFIC_ACTIONS = {
+    'Amazon': ['climate pledge', 'pledge fund'],
+    'Apple': ['supply chain', 'carbon footprint'],
+    'Bank of America': ['green bond'],
+    'BASF': ['palm oil'],
+    'Boeing': ['hazardous', 'waste', 'water use'],
+    'Chevron': ['human rights', 'racial'],
+    'Cisco': ['plastic'],
+    'Exxon Mobile': ['methane', 'flaring', 'emissions'],
+    'Facebook': ['solar', 'wind power', 'wind project'],
+    'Ford': ['water', 'gender'],
+    'General Motors': ['habitat', 'wildlife', 'energy use'],
+    'Honeywell': ['manufacturing site'],
+    'JP Morgan': ['global workforce'],
+    'JetBlue': ['fuel'],
+    'Johnson Johnson': ['health'],
+    'Mastercard': ['pandemic'],
+    'Mc Donalds': ['vegetarian', 'vegan', 'recycle'],
+    'Microsoft': ['water', 'circular economy'],
+    'Morgan Stanley': ['plastic', 'women', 'green bond'],
+    'Oracle': ['renewable energy', 'recycling', 'reuse'],
+    'PepsiCo': ['commodities'],
+    'Samsung': ['female'],
+    'Siemens': ['environment', 'efficiency'],
+    'TD Bank': ['emission'],
+    'Unilever': ['forest'],
+    'Visa': ['renewable electricity', 'green bond'],
+    'Walt Disney': ['diverse', 'diversity', 'energy'],
+    'Wells Fargo': ['development']
+}
+
+GENERAL_TOPCIS = {
+    "methane": ["flaring"],
+    "biodiversity": ["habitat", "wildlife"],
+    "plastic": ["recycling", "recycle", "reuse"],
+    "air travel": ["flying"]
+}
+
+KEYWORDS = {
+    "carbon": ["coal", "greenhouse gas"],
+    "sustainability": ["environment", "ecological", "sustainable", "sustainably"],
+    "climate pledge fund": [],
+    "the climate pledge": [],
+    "global warming": ["climate change", "global climate change"],
+    "fully-electric delivery": ["fully-electric delivery", "electric delivery", "e-mobility", "emobility"],
+    "net zero carbon": ["net-zero", "net zero", "carbon-neutral", "carbon neutral", "carbonneutral", "carbon free", "emission free"],
+    "protect forests": ["forestation", "reforestation", "afforestation", "save forest", "protect forest"],
+    "reduce carbon emission": ["become carbon neutral", "reduce greenhouse gas", "cut down emission", "reduction of greenhouse", "reduction of emission", "carbon emission", "greenhouse gas"],
+    "renewable energy": ["wind energy", "solar"],
+}
+
 DATA_PATH = "P:/Programming/Python/TUM.ai Makeathon/data"
 
 TWITTER_ARCHIVE_DATASET_PATH = f"{DATA_PATH}/Twitter Archive Dataset"
