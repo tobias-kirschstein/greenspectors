@@ -2,11 +2,110 @@ from typing import List
 
 import altair as alt
 import hydralit_components as hc
+import numpy as np
 import pandas as pd
 import streamlit as st
 from altair import Scale
 
 from greenspectors.env import COMPANY_NAMES, LABELED_COMPANY_SUSTAINABILITY_PATH, LABELED_KEYWORDS_PATH, KEYWORDS
+
+
+def streamlit_theme():
+    font = "sans-serif"
+    primary_color = "#6aa84f"
+    font_color = "#FAFAFA"
+    grey_color = "#262730"
+    base_size = 16
+    lg_font = base_size * 1.25
+    sm_font = base_size * 0.8  # st.table size
+    xl_font = base_size * 1.75
+
+    config = {
+        "config": {
+            "arc": {"fill": primary_color},
+            "area": {"fill": primary_color},
+            "circle": {"fill": primary_color, "stroke": font_color, "strokeWidth": 0.5},
+            "line": {"stroke": primary_color},
+            "path": {"stroke": primary_color},
+            "point": {"stroke": primary_color},
+            "rect": {"fill": primary_color},
+            "shape": {"stroke": primary_color},
+            "symbol": {"fill": primary_color},
+            "title": {
+                "font": font,
+                "color": font_color,
+                "fontSize": lg_font,
+                "anchor": "start",
+            },
+            "axis": {
+                "titleFont": font,
+                "titleColor": font_color,
+                "titleFontSize": sm_font,
+                "labelFont": font,
+                "labelColor": font_color,
+                "labelFontSize": sm_font,
+                "gridColor": grey_color,
+                "domainColor": font_color,
+                "tickColor": "#fff",
+            },
+            "header": {
+                "labelFont": font,
+                "titleFont": font,
+                "labelFontSize": base_size,
+                "titleFontSize": base_size,
+            },
+            "legend": {
+                "titleFont": font,
+                "titleColor": font_color,
+                "titleFontSize": sm_font,
+                "labelFont": font,
+                "labelColor": font_color,
+                "labelFontSize": sm_font,
+            },
+            "range": {
+                "category": ["#6aa84f", "#fffd80", "#0068c9", "#ff2b2b", "#09ab3b"],
+                "diverging": [
+                    "#6aa84f",
+                    "#cd1549",
+                    "#f6618d",
+                    "#fbafc4",
+                    "#f5f5f5",
+                    "#93c5fe",
+                    "#5091e6",
+                    "#1d5ebd",
+                    "#002f84",
+                ],
+                "heatmap": [
+                    "#6aa84f",
+                    "#ff97b8",
+                    "#ff7499",
+                    "#fc4c78",
+                    "#ec245f",
+                    "#d2004b",
+                    "#b10034",
+                    "#91001f",
+                    "#720008",
+                ],
+                "ramp": [
+                    "#d9ead3",
+                    "#6aa84f"
+                ],
+                "ordinal": [
+                    "#6aa84f",
+                    "#ff97b8",
+                    "#ff7499",
+                    "#fc4c78",
+                    "#ec245f",
+                    "#d2004b",
+                    "#b10034",
+                    "#91001f",
+                    "#720008",
+                ],
+            },
+        }
+    }
+    return config
+
 
 # =========================================================================
 # Data Fetchers
@@ -49,7 +148,6 @@ def get_company_rankings(company_names: List[str] = COMPANY_NAMES) -> List[float
         company_rankings.append(ranking / 5)
 
     return company_rankings
-    # return list(np.random.rand(len(COMPANY_NAMES)))
 
 
 def get_company_perceptions(company_names: List[str] = COMPANY_NAMES) -> List[float]:
@@ -97,12 +195,13 @@ def get_company_pca_clustering() -> pd.DataFrame:
 # Pages
 # =========================================================================
 
+# -------------------------------------------------------------------------
+# Dashboard
+# -------------------------------------------------------------------------
 
 def build_dashboard_page():
     # Ranking of the companies
     st.header("Company Greenliness vs Public Perception")
-
-    # TODO: Make everything GREEN
 
     chosen_companies = st.multiselect(
         'Companies',
@@ -113,39 +212,40 @@ def build_dashboard_page():
     company_perceptions = get_company_perceptions(company_names=chosen_companies)
 
     company_rankings_and_perceptions_df = pd.DataFrame([
-        {'Company': company, 'Ranking': ranking, 'Perception': perception, 'Discrepancy': abs(ranking - perception)}
+        {'Company': company, 'Ranking': ranking, 'Perception': perception, 'Discrepancy': ranking - perception}
         for company, ranking, perception in zip(chosen_companies, company_rankings, company_perceptions)
     ])
     company_rankings_and_perceptions_df.set_index('Company')
+    st.subheader("Discrepancy of Greenliness / Public Perception")
 
     st.altair_chart(
         alt.Chart(company_rankings_and_perceptions_df).mark_circle(size=100).encode(
-            x='Ranking',
-            y='Perception',
-            color='Discrepancy',
-            tooltip=['Company']
+            x=alt.X('Ranking', scale=alt.Scale(domain=[-0.1, 1.1])),
+            y=alt.Y('Perception', scale=alt.Scale(domain=[-0.1, 1.1])),
+            color=alt.Color('Discrepancy', scale=alt.Scale(scheme='redyellowgreen')),
+            tooltip=['Company', 'Ranking', 'Perception']
         ).interactive(), use_container_width=True)
 
     # bar charts
     col1, col2 = st.columns(2)
 
     with col1:
-        st.header("Greenliness")
+        st.subheader("Greenliness Ranking")
         st.altair_chart(
             alt.Chart(company_rankings_and_perceptions_df).mark_bar().encode(
-                x='Ranking',
-                color='Ranking',
+                x=alt.X('Ranking', scale=alt.Scale(domain=[0, 1])),
+                color=alt.Color('Ranking', legend=None, scale=alt.Scale(scheme='redyellowgreen')),
                 y=alt.Y("Company", sort='-x')
-            ).properties(height=700))
+            ).properties(height=700, width=300))
 
     with col2:
-        st.header("Public Perception")
+        st.subheader("Public Perception Ranking")
         st.altair_chart(
             alt.Chart(company_rankings_and_perceptions_df).mark_bar().encode(
-                x='Perception',
-                color='Perception',
+                x=alt.X('Perception', scale=alt.Scale(domain=[0, 1])),
+                color=alt.Color('Perception', legend=None, scale=alt.Scale(scheme='redyellowgreen')),
                 y=alt.Y("Company", sort='-x')
-            ).properties(height=700))
+            ).properties(height=700, width=300))
 
     # Company Clustering
     st.header("Company Clustering")
@@ -169,18 +269,22 @@ def build_dashboard_page():
             company_pca_clustering.loc[idx, 'Ranking'] = company_ranking
 
     company_pca_clustering = company_pca_clustering[company_pca_clustering['Selected'] == True]
-    print(company_pca_clustering)
 
     st.altair_chart(
         alt.Chart(company_pca_clustering).mark_point().encode(
             x='0',
             y='1',
-            color='Ranking',
+            color=alt.Color('Ranking', scale=alt.Scale(scheme='redyellowgreen')),
             shape='kmeans:O',
             tooltip=['Company name', 'Ranking']
         ),
         use_container_width=True
     )
+
+
+# -------------------------------------------------------------------------
+# Company Insights
+# -------------------------------------------------------------------------
 
 
 def build_company_insights_page():
@@ -201,6 +305,45 @@ def build_company_insights_page():
 
     with col2:
         st.metric("Public Perception", f"{company_perception: 0.2f}")
+
+    company_sustainability_ratings = get_company_sustainability_ratings().copy(True)
+    company_name_csv = selected_company
+    if selected_company in COMPANY_TO_CSV:
+        company_name_csv = COMPANY_TO_CSV[selected_company]
+
+    company_sustainability_rating = company_sustainability_ratings.iloc[[
+        (company_sustainability_ratings['Company name'] == company_name_csv).argmax()]]
+
+    columns_to_drop = []
+    for column in company_sustainability_rating.columns:
+        value = company_sustainability_rating.iloc[0][column]
+        if isinstance(value, np.float) and np.isnan(value) or isinstance(value, str):
+            columns_to_drop.append(column)
+
+    company_sustainability_rating = company_sustainability_rating.drop(columns=columns_to_drop)
+
+    company_sustainability_rating = company_sustainability_rating.astype(int)
+
+    def color_cells(s):
+        if isinstance(s, int) or isinstance(s, float):
+            if s <= 0:
+                return 'color: red'
+            elif s <= 1:
+                return 'color: orange'
+            elif s <= 2:
+                return 'color: yellow'
+            elif s <= 3:
+                return 'color: white'
+            elif s <= 4:
+                return 'color: lightgreen'
+            elif s >= 5:
+                return 'color: darkgreen'
+        else:
+            return 'color: white'
+
+    company_sustainability_rating = company_sustainability_rating.style.applymap(color_cells)
+    print(company_sustainability_rating)
+    st.table(company_sustainability_rating)
 
     st.header("Historical development of Public Perception")
 
@@ -233,6 +376,11 @@ def build_company_insights_page():
         negative_tweets_container.info(tweet['tweet'])
 
 
+# -------------------------------------------------------------------------
+# Sustainability Topics
+# -------------------------------------------------------------------------
+
+
 def build_sustainability_topics_page():
     # Keywords and perceptions
     st.header("Public Perception of Sustainability Topics")
@@ -249,7 +397,10 @@ def build_sustainability_topics_page():
 
     st.altair_chart(alt.Chart(keywords_and_perceptions).mark_bar().encode(
         x=alt.X('Topic', sort='y'),
-        y=alt.Y('Public Perception', scale=alt.Scale(domain=[0, 1]))
+        y=alt.Y('Public Perception', scale=alt.Scale(domain=[0, 1])),
+        color=alt.Color('Public Perception', scale=alt.Scale(scheme='redyellowgreen', domain=[0, 1]))
+    ).properties(
+        height=400
     ), use_container_width=True)
 
     # Search own
@@ -295,6 +446,9 @@ def build_sustainability_topics_page():
 
 
 if __name__ == '__main__':
+    alt.themes.register("streamlit", streamlit_theme)
+    alt.themes.enable("streamlit")
+
     # specify the primary menu definition
     menu_data = [
         {'icon': "fas fa-tachometer-alt", 'label': "Dashboard", 'id': 'dashboard'},
