@@ -151,7 +151,13 @@ def get_company_rankings(company_names: List[str] = COMPANY_NAMES) -> List[float
 
 
 def get_company_perceptions(company_names: List[str] = COMPANY_NAMES) -> List[float]:
-    return [get_company_sustainability_tweets(company_name)['Label'].mean() / 2 for company_name in company_names]
+    perceptions = []
+    for company_name in company_names:
+        company_sustainability_tweets = get_company_sustainability_tweets(company_name)
+        perceptions.append(
+            (company_sustainability_tweets['Label'] * company_sustainability_tweets['weight']).sum() /
+            company_sustainability_tweets['weight'].sum())
+    return perceptions
 
 
 @st.cache
@@ -161,7 +167,14 @@ def get_company_sustainability_ratings() -> pd.DataFrame:
 
 @st.cache
 def get_company_sustainability_tweets(company_name: str) -> pd.DataFrame:
-    return pd.read_csv(f"{LABELED_COMPANY_SUSTAINABILITY_PATH}/labeled_{company_name}_Sustainability.csv")
+    company_sustainability_tweets = pd.read_csv(
+        f"{LABELED_COMPANY_SUSTAINABILITY_PATH}/labeled_{company_name}_Sustainability.csv")
+    company_sustainability_tweets['Label'] /= 2
+    company_sustainability_tweets['weight'] = 1 + company_sustainability_tweets['likes_count'] \
+                                              + company_sustainability_tweets['likes_count'] \
+                                              + company_sustainability_tweets['retweet_count']
+
+    return company_sustainability_tweets
 
 
 @st.cache
@@ -170,7 +183,14 @@ def get_keyword_tweets(keyword: str) -> pd.DataFrame:
         file_name = f"net zero carbon_labeled"
     else:
         file_name = f"labeled_{keyword}"
-    return pd.read_csv(f"{LABELED_KEYWORDS_PATH}/{file_name}.csv")
+    keyword_tweets = pd.read_csv(f"{LABELED_KEYWORDS_PATH}/{file_name}.csv")
+
+    keyword_tweets['Label'] /= 2
+    keyword_tweets['weight'] = 1 + keyword_tweets['likes_count'] \
+                               + keyword_tweets['likes_count'] \
+                               + keyword_tweets['retweet_count']
+
+    return keyword_tweets
 
 
 @st.cache
@@ -275,7 +295,7 @@ def build_dashboard_page():
             x='0',
             y='1',
             color=alt.Color('Ranking', scale=alt.Scale(scheme='redyellowgreen')),
-            shape='kmeans:O',
+            shape=alt.Shape('kmeans:O', legend=None),
             tooltip=['Company name', 'Ranking']
         ),
         use_container_width=True
@@ -295,7 +315,9 @@ def build_company_insights_page():
     company_sustainability_tweets = get_company_sustainability_tweets(selected_company)
 
     company_ranking = get_company_rankings([selected_company])[0]
-    company_perception = company_sustainability_tweets['Label'].mean() / 2
+
+    company_perception = (company_sustainability_tweets['Label'] * company_sustainability_tweets['weight']).sum() / \
+                         company_sustainability_tweets['weight'].sum()
 
     st.header(f"Public Sustainability Opinion of {selected_company}")
 
@@ -347,7 +369,6 @@ def build_company_insights_page():
     st.header("Historical development of Public Perception")
 
     perception_by_time = company_sustainability_tweets[['Label']]
-    perception_by_time['Label'] /= 2
     perception_by_time['time'] = pd.to_datetime(company_sustainability_tweets['created_at'])
 
     st.altair_chart(
@@ -387,7 +408,7 @@ def build_sustainability_topics_page():
     public_perception_per_keyword = dict()
     for keyword in KEYWORDS:
         df = get_keyword_tweets(keyword)
-        public_perception_per_keyword[keyword] = df['Label'].mean() / 2
+        public_perception_per_keyword[keyword] = (df['Label'] * df['weight']).sum() / df['weight'].sum()
 
     keywords_and_perceptions = pd.DataFrame(
         [{'Topic': keyword, 'Public Perception': perception} for keyword, perception in
@@ -408,7 +429,7 @@ def build_sustainability_topics_page():
     all_tweets = get_combined_tweets()
     filtered_tweets = all_tweets[all_tweets['tweet'].str.contains(search_keyword)]
     n_filtered_tweets = len(filtered_tweets)
-    keyword_perception = filtered_tweets['Label'].mean() / 2
+    keyword_perception = (filtered_tweets['Label'] * filtered_tweets['weight']).sum() / filtered_tweets['weight'].sum()
 
     if n_filtered_tweets > 0:
 
