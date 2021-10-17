@@ -342,7 +342,6 @@ def build_company_insights_page():
             return 'color: white'
 
     company_sustainability_rating = company_sustainability_rating.style.applymap(color_cells)
-    print(company_sustainability_rating)
     st.table(company_sustainability_rating)
 
     st.header("Historical development of Public Perception")
