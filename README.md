@@ -1,6 +1,10 @@
 # The Greenspectors
 TUM.ai Makeathon October 2021
 
+![grafik](https://user-images.githubusercontent.com/6200099/137619081-e80e9608-7714-4092-914d-19b6183dcabf.png)  
+Link to our [demo](http://tobias-kirschstein.de:8501/)
+
+
 # 0. Links to docs / presentations / ...
  - [Task planning](https://docs.google.com/document/d/1Ro8nIAeYcWVywB1NEJlZ1F7wzv7KIiPk-sV98JiK3Ro/edit?usp=sharing)
  - [Siemens Q&A](https://docs.google.com/document/d/1Vqd6bRytk_fKfnCmVjwEGyBJnr00Gjnls0Gd2aTCW_E/edit?usp=sharing)
